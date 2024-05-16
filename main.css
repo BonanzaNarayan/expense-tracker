@@ -1,0 +1,278 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: rgb(44, 44, 44);
+}
+#preLoader{
+    /* background: url(/Assets/YmvJ.gif); */
+    /* background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat; */
+    background: black;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+header{
+    background: rgb(48, 48, 48);
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+header h1{
+    user-select: none;
+    color: rgb(196, 196, 196);
+    font-size: 2rem;
+}
+header input{
+    background: rgb(73, 73, 73);
+    color: rgb(204, 204, 204);
+    font-size: 1.22rem;
+    border: solid 0.5px rgb(48, 48, 48);
+    border-radius: 1px;
+    padding: 10px;
+    width: 15rem;
+}
+header button{
+    padding: 10px;
+    width: 6rem;
+    border: 0;
+    background: rgb(255, 232, 167);
+}
+
+section{
+    position: relative;
+    padding: 20px;
+}
+#expense-section{
+    padding: 20px;
+    color: #ddd;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  
+  form input:not(#type),
+  form button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    margin-bottom: 5px;
+    height: 42px;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    background: rgb(49, 49, 49);
+    color: white;
+    
+  }
+  
+  form button {
+    background-color: rgb(73, 73, 73);
+  
+    color: rgb(233, 233, 233);
+    font-weight: 550;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  form label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+  form div:nth-child(-n + 2) {
+    flex-basis: 100%;
+  }
+  
+  form div:nth-child(n + 3) {
+    flex-basis: calc(50% - 5px);
+  }
+  
+  input#type {
+    appearance: none;
+    position: absolute;
+  }
+
+.total {
+    color: #ddd;
+    padding: 20px;
+    margin-top: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .total div {
+    padding: 0px;
+  }
+  
+  .total div:first-child {
+    flex-basis: 100%;
+    font-size: 2.25rem;
+    font-weight: 600;
+  }
+  .total .in-ex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  .total .in-ex div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 10rem;
+    flex-basis: 50%;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  /* header .in-ex div #expense{
+    font-size: 1.1rem;
+  } */
+  
+  .total h5 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .total div #balance{
+    font-size: 1.6rem;
+  }
+
+
+  .option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background: rgb(73, 73, 73);
+    border-radius: 2px;
+    position: relative;
+    color: white;
+  }
+  
+  .option span {
+    width: 50%;
+    text-align: center;
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  .option::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 0;
+    background-color: #383838;
+    height: calc(100% - 10px);
+    width: calc(50% - 10px);
+    transform: translateX(5px);
+    border-radius: inherit;
+    box-shadow: 0 2px 2px rgba(223, 223, 223, 0.89);
+    transition: all 200ms;
+  }
+  
+  input#type:checked ~ .option::before {
+    left: 50%;
+  }
+
+  #transactions-all{
+    height: inherit;
+    color: #fff;
+  }
+
+  ul {
+    list-style-type: none;
+    color: #ddd;
+  }
+  
+  ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 5px 10px;
+    position: relative;
+  }
+  
+  ul li:hover {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  
+  .name {
+    flex: 1;
+  }
+  
+  .name h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    user-select: none;
+  }
+  
+  .name p {
+    font-size: 0.8rem;
+    color: #9b9b9b;
+    user-select: none;
+  }
+  
+  .amount {
+    font-weight: 600;
+    user-select: none;
+  }
+  
+  .amount.income {
+    color: rgb(27, 221, 27);
+    user-select: none;
+  }
+  
+  .amount.expense {
+    color: rgb(250, 23, 23);
+    user-select: none;
+  }
+  
+  .action {
+    color: #ff2a2a;
+    height: 100%;
+    width: 50px;
+    display: grid;
+    place-items: center;
+    transform-origin: right;
+    transition: all 300ms;
+  }
+  
+  
+  
+  .action svg {
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+  }
+  
+  #status {
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
